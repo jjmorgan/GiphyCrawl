@@ -23,7 +23,7 @@ from sys import stdout
 from sys import exit
 
 MAX_DL_PER_TAG = 10
-MAX_THREADS = 1
+MAX_THREADS = 6
 
 PUBLIC_BETA_KEY = "dc6zaTOxFJmzC"
 
@@ -153,7 +153,7 @@ def main():
   if not os.path.exists("crawl"):
     os.mkdir("crawl")
     
-  categories = [get_categories()[0]]
+  categories = get_categories()
   print "Starting crawl for", len(categories), "categories..."
     
   # assign each thread a single category to crawl
