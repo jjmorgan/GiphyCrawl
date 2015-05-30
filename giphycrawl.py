@@ -145,7 +145,6 @@ def get_tags_for_image(name, url):
   end = response.find(", GIF, Animated GIF\">")
   start = response.rfind("\"", 0, end)
   tags = response[start+1:end]
-  print (name, tags)
   return (name, tags)
   
 ''' Main routine -- Launches threads to crawl Giphy categories '''
